@@ -5,21 +5,19 @@
         const serviceStatus = event.record["service_status"].value;
         console.log(serviceStatus)
 
-        if (serviceStatus.length > 0) {
+        if (serviceStatus.length) {
             // メッセージ用の要素を作成
+            console.log(serviceStatus.length)
+            const targetElement = document.querySelector('.gaia-argoui-app-toolbar-statusmenu');
             const messageDiv = document.createElement("div");
             messageDiv.textContent = "この企業は使えません";
-            messageDiv.style.position = "fixed";
-            messageDiv.style.top = "20px";
-            messageDiv.style.left = "50%";
-            messageDiv.style.transform = "translateX(-50%)";
             messageDiv.style.backgroundColor = "red";
             messageDiv.style.color = "white";
-            messageDiv.style.padding = "10px 20px";
+            messageDiv.style.padding = "5px 10px";
             messageDiv.style.borderRadius = "5px";
-            messageDiv.style.zIndex = "100";
+            messageDiv.style.fontSize = "14px";
 
-            document.body.appendChild(messageDiv);
+            targetElement.appendChild(messageDiv);
         }
 
         return event;
