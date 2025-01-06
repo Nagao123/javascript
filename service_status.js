@@ -22,11 +22,6 @@
 
             // body に追加して表示
             document.body.appendChild(messageDiv);
-
-            // 5秒後に自動でメッセージを削除
-            setTimeout(function () {
-                messageDiv.remove();
-            }, 5000);
         }
 
         return event;
