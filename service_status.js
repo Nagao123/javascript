@@ -2,7 +2,6 @@
     "use strict";
 
     kintone.events.on("app.record.detail.show", function (event) {
-        console.log("hello world")
         const serviceStatus = event.record["service_status"].value;
         console.log(serviceStatus)
 
@@ -20,7 +19,6 @@
             messageDiv.style.borderRadius = "5px";
             messageDiv.style.zIndex = "100";
 
-            // body に追加して表示
             document.body.appendChild(messageDiv);
         }
 
