@@ -2,6 +2,7 @@
     "use strict";
 
     kintone.events.on("app.record.detail.show", function (event) {
+        console.log("hello world")
         const serviceStatus = event.record["service_status"].value;
         console.log(serviceStatus)
 
