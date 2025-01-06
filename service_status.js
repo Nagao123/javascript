@@ -5,7 +5,7 @@
         const serviceStatus = event.record["service_status"].value;
         console.log(serviceStatus)
 
-        if (serviceStatus) {
+        if (serviceStatus.length > 0) {
             // メッセージ用の要素を作成
             const messageDiv = document.createElement("div");
             messageDiv.textContent = "この企業は使えません";
