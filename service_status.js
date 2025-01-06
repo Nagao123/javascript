@@ -10,7 +10,7 @@
             console.log(serviceStatus.length)
             const targetElement = document.querySelector('.gaia-argoui-app-toolbar-statusmenu');
             const messageDiv = document.createElement("div");
-            messageDiv.textContent = "この企業は使えません";
+            messageDiv.textContent = "この企業は利用できません。";
             messageDiv.style.backgroundColor = "red";
             messageDiv.style.color = "white";
             messageDiv.style.padding = "5px 10px";
